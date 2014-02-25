@@ -451,6 +451,7 @@ public class OpenRocketAPI {
 		else{
 			m_bIsSimulationLoopRunning=true;
 			}
+		
 		return 0;
 	}
 

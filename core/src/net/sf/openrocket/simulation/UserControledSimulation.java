@@ -78,8 +78,6 @@ public class UserControledSimulation extends BasicEventSimulationEngine {
 		
 		//status = new SimulationStatus(Status);
 		
-		
-		
 		try {
 			
 			if (handleEvents() == false)
