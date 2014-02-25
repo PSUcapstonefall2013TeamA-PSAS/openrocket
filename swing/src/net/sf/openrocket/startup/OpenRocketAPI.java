@@ -374,6 +374,7 @@ public class OpenRocketAPI {
 		}
 		return 0;
 	}
+	
 	/**
 	 * runs simulation start to finish just like openrocket main.
 	 * */
@@ -446,8 +447,10 @@ public class OpenRocketAPI {
 		
 		m_CStatus=m_CRocket.stagestep(m_CFlightData, m_CStatus);
 		if(m_CStatus==null)
-			m_bIsSimulationStagesRunning = false;
-			
+			{m_bIsSimulationStagesRunning = false;}
+		else{
+			m_bIsSimulationLoopRunning=true;
+			}
 		return 0;
 	}
 

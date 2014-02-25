@@ -191,6 +191,10 @@ public class UserControledSimulation extends BasicEventSimulationEngine {
 			status.getWarnings().add(e.getLocalizedMessage());
 		}
 		
+		if (status.getClass() != RK4SimulationStatus.class) {
+			status = new RK4SimulationStatus(status);
+		}
+		
 		return (RK4SimulationStatus) status;
 	}
 	
@@ -254,6 +258,7 @@ public class UserControledSimulation extends BasicEventSimulationEngine {
 		}
 		
 		status = Status;
+		
 		
 		SimulationStatus stageStatus = stages.pop();
 		if (stageStatus == null) {
